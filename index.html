@@ -1,0 +1,166 @@
+
+<Html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>MyResume</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-light row">
+        <div class="items col-1"></div>
+        <div class="items col-5"><span id="main_link" onclick="scroll_to_element('main')" data-top="color: rgba(227, 26, 109)" data-top-bottom="color: rgba(255, 255, 255)" data-anchor-target="#main">HOME</span><span id="introduce_link" onclick="scroll_to_element('about')" data-bottom-top="color: rgba(255, 255, 255)" data-top="color: rgba(227, 26, 109)" data-top-bottom="color: rgba(255, 255, 255)" data-anchor-target="#about">ABOUT</span><span id="projects_link" onclick="scroll_to_element('projects')" data-bottom-top="color: rgba(255, 255, 255)" data-top="color: rgba(227, 26, 109)" data-top-bottom="color: rgba(255, 255, 255)" data-anchor-target="#projects">Projects</span><span id="blogs_link" onclick="scroll_to_element('blogs')" data-bottom-top="color: rgba(255, 255, 255)" data-top="color: rgba(227, 26, 109)" data-top-bottom="color: rgba(255, 255, 255)" data-anchor-target="#blogs">BLOG</span><span id="contact_link" onclick="scroll_to_element('contact')" data-bottom-top="color: rgba(255, 255, 255)" data-top="color: rgba(227, 26, 109)" data-anchor-target="#contact">CONTACT</span></div>
+        <div class="items col-6"></div>
+      </nav>
+      <div class="green_line"></div>
+    </header>
+    <section id="main">
+      <canvas id="canvas"></canvas>
+      <div class="main_content">
+        <div class="main_text">Hello, 
+          <div class="red">I'm Chih-Kai Jan </div>
+        </div>
+        <div class="main_text">I'm a full-stack web developer </div>
+        <div class="main_button" onclick="scroll_to_element('about')">View my work</div>
+      </div>
+    </section>
+    <section class="row" id="about">
+      <div class="title">About
+        <div class="break_line"></div>
+      </div>
+      <div class="information col-4" data-bottom-top="transform: translateX(-50px);opacity: 0" data-bottom-center="transform: translateX(0px);opacity: 1"><img class="rounded-circle" src="cat.jpeg"/>
+        <div class="question">Who's this guy?</div>
+        <p>I'm the Front-End Developer for EyeCue Lab in Portland, OR. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Let's make something special.</p>
+      </div>
+      <div class="skills col-8" data-bottom-top="transform: translateX(50px);opacity: 0" data-bottom-center="transform: translateX(0px);opacity: 1">
+        <div class="skill"> 
+          <div class="text">html</div>
+          <div class="line percent70" data-bottom-top="width: 0" data-bottom-center="width: 50%"></div>
+          <div class="percent">70%</div>
+        </div>
+        <div class="skill"> 
+          <div class="text">sass</div>
+          <div class="line percent75" data-bottom-top="width: 0" data-bottom-center="width: 55%"></div>
+          <div class="percent">75%</div>
+        </div>
+        <div class="skill"> 
+          <div class="text">javascript</div>
+          <div class="line percent70" data-bottom-top="width: 0" data-bottom-center="width: 50%"></div>
+          <div class="percent">70%</div>
+        </div>
+        <div class="skill"> 
+          <div class="text">python</div>
+          <div class="line percent85" data-bottom-top="width: 0" data-bottom-center="width: 60%"></div>
+          <div class="percent">85%</div>
+        </div>
+        <div class="skill"> 
+          <div class="text">java</div>
+          <div class="line percent90" data-bottom-top="width: 0" data-bottom-center="width: 64%"></div>
+          <div class="percent">90%</div>
+        </div>
+        <div class="skill"> 
+          <div class="text">django</div>
+          <div class="line percent90" data-bottom-top="width: 0" data-bottom-center="width: 64%"></div>
+          <div class="percent">90%</div>
+        </div>
+        <div class="skill"> 
+          <div class="text">spring</div>
+          <div class="line percent85" data-bottom-top="width: 0" data-bottom-center="width: 60%"></div>
+          <div class="percent">85%</div>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="title" data-bottom-top="transform: translateX(-50px);opacity: 0" data-bottom-center="transform: translateX(0px);opacity: 1">Projects
+          <div class="break_line"></div>
+        </div>
+        <div class="imgs">
+          <div class="content" data-bottom-top="transform: translateY(100px); opacity: 0" data-bottom-center="transform: translateY(0px);opacity: 1">
+            <div class="img" id="myblog"></div>
+            <div class="name">MyBlog</div>
+            <div class="skill">Django</div>
+            <div class="button">Learn More</div>
+          </div>
+          <div class="content" data-bottom-top="transform: translateY(100px); opacity: 0" data-bottom-center="transform: translateY(0px);opacity: 1">
+            <div class="img" id="myptt"></div>
+            <div class="name">MyPTT</div>
+            <div class="skill">JAVA</div>
+            <div class="button">Learn More</div>
+          </div>
+          <div class="content" data-bottom-top="transform: translateY(100px); opacity: 0" data-bottom-center="transform: translateY(0px);opacity: 1">
+            <div class="img" id="myshop"></div>
+            <div class="name">MyShop</div>
+            <div class="skill">Django</div>
+            <div class="button">Learn More</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="blogs">
+      <div class="container">
+        <div class="title" data-bottom-top="transform: translateX(-100px);opacity: 0" data-center="transform: translateX(0px);opacity: 1">Blog
+          <div class="break_line"></div>
+        </div>
+        <div class="imgs">
+          <div class="onHover">
+            <div class="blog" data-bottom-top="transform: translateX(-50px);opacity: 0" data-bottom-center="transform: translateX(0px);opacity: 1">
+              <div class="img" id="blog1"></div>
+              <div class="blog_title">Breaking Your Coder's Block</div>
+              <div class="date">APRIL 29, 2016</div>
+              <div class="break_line blog_line"></div>
+              <div class="blog_content">one time or another, as a developer, we've all found ourselves hopelessly stuck on a coding issue... !Awake: This is Your Brain on Caffeine MARCH 19, 2015 If there's one thing I can truly claim to be an expert on, it's staying awake. For five years I struggled to stay employed... Getting a Handle on Handlebars MARCH 04, 2015 Here at EyeCue Lab we render most of our data-laden HTML pages in Handlebar templates...</div>
+            </div>
+          </div>
+          <div class="onHover">
+            <div class="blog" data-bottom-top="transform: translateX(-50px);opacity: 0" data-bottom-center="transform: translateX(0px);opacity: 1">
+              <div class="img" id="blog2"></div>
+              <div class="blog_title">Breaking Your Coder's Block</div>
+              <div class="date">APRIL 29, 2016</div>
+              <div class="break_line blog_line"></div>
+              <div class="blog_content">one time or another, as a developer, we've all found ourselves hopelessly stuck on a coding issue... !Awake: This is Your Brain on Caffeine MARCH 19, 2015 If there's one thing I can truly claim to be an expert on, it's staying awake. For five years I struggled to stay employed... Getting a Handle on Handlebars MARCH 04, 2015 Here at EyeCue Lab we render most of our data-laden HTML pages in Handlebar templates...</div>
+            </div>
+          </div>
+          <div class="onHover">
+            <div class="blog" data-bottom-top="transform: translateX(-50px);opacity: 0" data-bottom-center="transform: translateX(0px);opacity: 1">
+              <div class="img" id="blog3"></div>
+              <div class="blog_title">Breaking Your Coder's Block</div>
+              <div class="date">APRIL 29, 2016</div>
+              <div class="break_line blog_line"></div>
+              <div class="blog_content">one time or another, as a developer, we've all found ourselves hopelessly stuck on a coding issue... !Awake: This is Your Brain on Caffeine MARCH 19, 2015 If there's one thing I can truly claim to be an expert on, it's staying awake. For five years I struggled to stay employed... Getting a Handle on Handlebars MARCH 04, 2015 Here at EyeCue Lab we render most of our data-laden HTML pages in Handlebar templates...</div>
+            </div>
+          </div>
+          <div class="onHover">
+            <div class="blog" data-bottom-top="transform: translateX(-50px);opacity: 0" data-bottom-center="transform: translateX(0px);opacity: 1">
+              <div class="img" id="blog4"></div>
+              <div class="blog_title">Breaking Your Coder's Block</div>
+              <div class="date">APRIL 29, 2016</div>
+              <div class="break_line blog_line"></div>
+              <div class="blog_content">one time or another, as a developer, we've all found ourselves hopelessly stuck on a coding issue... !Awake: This is Your Brain on Caffeine MARCH 19, 2015 If there's one thing I can truly claim to be an expert on, it's staying awake. For five years I struggled to stay employed... Getting a Handle on Handlebars MARCH 04, 2015 Here at EyeCue Lab we render most of our data-laden HTML pages in Handlebar templates...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">contact
+      <div class="title contact_title" data-bottom-top="transform: translateX(-100px);opacity: 0" data-center="transform: translateX(0px);opacity: 1">Contact</div>
+      <div class="break_line contact_line" data-bottom-top="transform: translateX(100px);opacity: 0" data-center="transform: translateX(-50%);opacity: 1"></div>
+      <div class="hints" data-bottom-top="opacity: 0" data-center="opacity: 1">Have a question or want to work together?</div>
+      <div class="container">
+        <form data-bottom-top="opacity: 0" data-center="opacity: 1">
+          <input id="email" type="email" placeholder="Email"/>
+          <input id="name" type="text" placeholder="Name"/>
+          <textarea placeholder="Your Message"></textarea>
+          <div class="submit_button">
+            <input class="submit" type="submit"/>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="final"></section>
+    <script src="skrollr.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</Html>

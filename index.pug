@@ -1,0 +1,155 @@
+Html
+	head
+		link(rel="stylesheet" type="text/css" href="index.css")
+		link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+		script(src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js")
+		
+		title MyResume
+	body
+		header
+			nav.navbar.navbar-light.row
+				//- .col-6.logo
+				//- 	img.rounded-circle(src="cat.jpeg")
+				//- 	.name
+				//- 		.chi 詹之愷
+				//- 		.eng Chih-Kai Jan
+				.items.col-1
+				.items.col-5
+					span#main_link(onclick="scroll_to_element('main')" data-top="color: rgba(227, 26, 109)" data-top-bottom="color: rgba(255, 255, 255)" data-anchor-target="#main") HOME
+
+					span#introduce_link(onclick="scroll_to_element('about')" data-bottom-top="color: rgba(255, 255, 255)" data-top="color: rgba(227, 26, 109)" data-top-bottom="color: rgba(255, 255, 255)" data-anchor-target="#about") ABOUT
+
+					span#projects_link(onclick="scroll_to_element('projects')" data-bottom-top="color: rgba(255, 255, 255)" data-top="color: rgba(227, 26, 109)" data-top-bottom="color: rgba(255, 255, 255)" data-anchor-target="#projects") Projects
+
+					span#blogs_link(onclick="scroll_to_element('blogs')" data-bottom-top="color: rgba(255, 255, 255)" data-top="color: rgba(227, 26, 109)" data-top-bottom="color: rgba(255, 255, 255)" data-anchor-target="#blogs") BLOG
+
+					span#contact_link(onclick="scroll_to_element('contact')"  data-bottom-top="color: rgba(255, 255, 255)" data-top="color: rgba(227, 26, 109)" data-anchor-target="#contact") CONTACT
+				.items.col-6
+			.green_line
+		
+		section#main
+			canvas#canvas
+			.main_content
+				.main_text Hello, 
+					.red I'm Chih-Kai Jan 
+				.main_text I'm a full-stack web developer 
+				.main_button(onclick="scroll_to_element('about')") View my work
+
+		section#about.row
+			.title About
+				.break_line
+			.information.col-4(data-bottom-top="transform: translateX(-50px);opacity: 0" data-bottom-center="transform: translateX(0px);opacity: 1")
+				img.rounded-circle(src='cat.jpeg')
+				.question Who's this guy?
+				p I'm the Front-End Developer for EyeCue Lab in Portland, OR. I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences. Let's make something special.
+			.skills.col-8(data-bottom-top="transform: translateX(50px);opacity: 0" data-bottom-center="transform: translateX(0px);opacity: 1")
+				.skill 
+					.text html
+					.line.percent70(data-bottom-top="width: 0" data-bottom-center="width: 50%")
+					.percent 70%
+				.skill 
+					.text sass
+					.line.percent75(data-bottom-top="width: 0" data-bottom-center="width: 55%")
+					.percent 75%
+				.skill 
+					.text javascript
+					.line.percent70(data-bottom-top="width: 0" data-bottom-center="width: 50%")
+					.percent 70%
+				.skill 
+					.text python
+					.line.percent85(data-bottom-top="width: 0" data-bottom-center="width: 60%")
+					.percent 85%
+				.skill 
+					.text java
+					.line.percent90(data-bottom-top="width: 0" data-bottom-center="width: 64%")
+					.percent 90%
+				.skill 
+					.text django
+					.line.percent90(data-bottom-top="width: 0" data-bottom-center="width: 64%")
+					.percent 90%
+				.skill 
+					.text spring
+					.line.percent85(data-bottom-top="width: 0" data-bottom-center="width: 60%")
+					.percent 85%
+
+
+
+
+		
+		section#projects
+			.container
+				.title(data-bottom-top="transform: translateX(-50px);opacity: 0" data-bottom-center="transform: translateX(0px);opacity: 1") Projects
+					.break_line
+				.imgs
+					.content(data-bottom-top="transform: translateY(100px); opacity: 0" data-bottom-center="transform: translateY(0px);opacity: 1")
+						#myblog.img
+						.name MyBlog
+						.skill Django
+						.button Learn More
+					.content(data-bottom-top="transform: translateY(100px); opacity: 0" data-bottom-center="transform: translateY(0px);opacity: 1")
+						#myptt.img
+						.name MyPTT
+						.skill JAVA
+						.button Learn More
+					.content(data-bottom-top="transform: translateY(100px); opacity: 0" data-bottom-center="transform: translateY(0px);opacity: 1")
+						#myshop.img
+						.name MyShop
+						.skill Django
+						.button Learn More
+
+		section#blogs
+			.container
+				.title(data-bottom-top="transform: translateX(-100px);opacity: 0" data-center="transform: translateX(0px);opacity: 1") Blog
+					.break_line
+				.imgs
+					.onHover
+						.blog(data-bottom-top="transform: translateX(-50px);opacity: 0" data-bottom-center="transform: translateX(0px);opacity: 1")
+							#blog1.img
+							.blog_title Breaking Your Coder's Block
+							.date APRIL 29, 2016
+							.break_line.blog_line
+							.blog_content one time or another, as a developer, we've all found ourselves hopelessly stuck on a coding issue... !Awake: This is Your Brain on Caffeine MARCH 19, 2015 If there's one thing I can truly claim to be an expert on, it's staying awake. For five years I struggled to stay employed... Getting a Handle on Handlebars MARCH 04, 2015 Here at EyeCue Lab we render most of our data-laden HTML pages in Handlebar templates...
+					.onHover
+						.blog(data-bottom-top="transform: translateX(-50px);opacity: 0" data-bottom-center="transform: translateX(0px);opacity: 1")
+							#blog2.img
+							.blog_title Breaking Your Coder's Block
+							.date APRIL 29, 2016
+							.break_line.blog_line
+							.blog_content one time or another, as a developer, we've all found ourselves hopelessly stuck on a coding issue... !Awake: This is Your Brain on Caffeine MARCH 19, 2015 If there's one thing I can truly claim to be an expert on, it's staying awake. For five years I struggled to stay employed... Getting a Handle on Handlebars MARCH 04, 2015 Here at EyeCue Lab we render most of our data-laden HTML pages in Handlebar templates...
+					.onHover
+						.blog(data-bottom-top="transform: translateX(-50px);opacity: 0" data-bottom-center="transform: translateX(0px);opacity: 1")
+							#blog3.img
+							.blog_title Breaking Your Coder's Block
+							.date APRIL 29, 2016
+							.break_line.blog_line
+							.blog_content one time or another, as a developer, we've all found ourselves hopelessly stuck on a coding issue... !Awake: This is Your Brain on Caffeine MARCH 19, 2015 If there's one thing I can truly claim to be an expert on, it's staying awake. For five years I struggled to stay employed... Getting a Handle on Handlebars MARCH 04, 2015 Here at EyeCue Lab we render most of our data-laden HTML pages in Handlebar templates...
+
+					.onHover
+						.blog(data-bottom-top="transform: translateX(-50px);opacity: 0" data-bottom-center="transform: translateX(0px);opacity: 1")
+							#blog4.img
+							.blog_title Breaking Your Coder's Block
+							.date APRIL 29, 2016
+							.break_line.blog_line
+							.blog_content one time or another, as a developer, we've all found ourselves hopelessly stuck on a coding issue... !Awake: This is Your Brain on Caffeine MARCH 19, 2015 If there's one thing I can truly claim to be an expert on, it's staying awake. For five years I struggled to stay employed... Getting a Handle on Handlebars MARCH 04, 2015 Here at EyeCue Lab we render most of our data-laden HTML pages in Handlebar templates...
+
+		section#contact contact
+			.title.contact_title(data-bottom-top="transform: translateX(-100px);opacity: 0" data-center="transform: translateX(0px);opacity: 1") Contact
+			.break_line.contact_line(data-bottom-top="transform: translateX(100px);opacity: 0" data-center="transform: translateX(-50%);opacity: 1")
+			.hints(data-bottom-top="opacity: 0" data-center="opacity: 1") Have a question or want to work together?
+			.container
+				form(data-bottom-top="opacity: 0" data-center="opacity: 1")
+					input#email(type='email' placeholder='Email') 
+					input#name(type='text' placeholder='Name')
+					textarea(placeholder='Your Message')
+					.submit_button
+						input.submit(type='submit')
+
+		section.final
+		script(src="skrollr.min.js")
+		script(src="index.js")
+
+
+
+
+
